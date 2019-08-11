@@ -1,33 +1,197 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: rgb(255, 132, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 132, 0, 1) 0%,
+    rgba(255, 161, 0, 1) 35%,
+    rgba(255, 186, 0, 1) 100%
+  );
+}
+
+body,
+input,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 50px 0;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.main-container h1 {
   color: white;
+  font-size: 62px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  margin-top: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container form input {
+  border: 1px solid #d86c00;
+  border-right: none;
+  height: 48px;
+  width: 380px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #999;
+}
+
+.form-container button {
+  margin-top: 30px;
+  height: 48px;
+  border: 1px solid #d86c00;
+  border-left: none;
+  padding: 0 16px;
+  font-size: 16px;
+  background: white;
+  cursor: pointer;
+  color: #828282;
+}
+
+.form-container button img {
+  margin-bottom: -4px;
+  height: 20px;
+  fill: #ff9b00;
+}
+
+.sepair-container {
+  background: white;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  height: 1px;
+}
+
+.capitals-container {
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 100px;
+}
+
+.capitals-container h2 {
+  color: white;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.temps-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.temps-grid .temp-grid {
+  display: grid;
+  grid-template-columns: 30px 40px auto;
+}
+
+.temps-grid .temp-grid span {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #755215;
+}
+
+.temps-grid .temp-grid p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.citie-card {
+  text-align: left;
+  background: #fff3e4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: -42px;
+}
+
+.citie-card .citie-header {
+  margin-left: 35px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: auto 30px;
+}
+
+.citie-card .citie-header p {
+  font-weight: bold;
+  color: #505050;
+}
+
+.citie-card .citie-header button {
+  border: none;
+  background: #fff3e4;
+  cursor: pointer;
+}
+
+.citie-card .citie-header button img {
+  height: 16px;
+}
+
+.citie-card .citie-body {
+  margin-left: 35px;
+  color: #aea79f;
+}
+
+.citie-card .citie-body h1 {
+  color: #505050;
+  font-size: 52px;
+  margin-bottom: 14px;
+}
+.citie-card .citie-body span {
+  font-weight: bold;
+  color: #505050;
+}
+
+.citie-card .citie-body img {
+  height: 14px;
+}
+
+.citie-card .citie-body .grid-stats {
+  display: grid;
+  grid-template-columns: 120px auto;
+  grid-row-gap: 14px;
+}
+
+.citie-card .citie-footer {
+  margin-top: 20px;
+  border-top: 1.5px solid #ff9c3a;
+}
+
+.citie-card .citie-footer .week-grid {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+  grid-column-gap: 26px;
+}
+
+.citie-card .citie-footer .week-grid p {
+  font-weight: bold;
+  color: #605f5d;
+  margin-bottom: 10px;
+}
+
+.citie-card .citie-footer .week-grid span {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff8203;
 }
